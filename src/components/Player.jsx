@@ -13,10 +13,6 @@ const Player = () => {
     }))
 
     const actions = useKeyboard()
-    console.log(
-        "act",
-        Object.entries(actions).filter(([k, v]) => v)
-    )
 
     const pos = useRef([0, 0, 0])
     const velocity = useRef([0, 0, 0])
