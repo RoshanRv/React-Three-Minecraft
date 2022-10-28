@@ -4,6 +4,8 @@ import React, { useEffect, useRef } from "react"
 import { Vector3 } from "three"
 import useKeyboard from "../hooks/useKeyboard"
 
+const JUMP_FORCE = 5
+
 const Player = () => {
     const { camera } = useThree()
     const [ref, api] = useSphere(() => ({
@@ -29,6 +31,14 @@ const Player = () => {
         camera.position.copy(
             new Vector3(pos.current[0], pos.current[1], pos.current[2])
         )
+
+        if (actions.jump && Math.abs(velocity.current[1] < 0.0001)) {
+            api.velocity.set(
+                velocity.current[0],
+                JUMP_FORCE,
+                velocity.current[2]
+            )
+        }
     })
 
     return <mesh ref={ref}></mesh>
