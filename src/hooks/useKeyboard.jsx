@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react"
 
 const actionsByKey = (key) => {
     const actions = {
-        KeyW: "moveFoward",
+        KeyW: "moveForward",
         KeyS: "moveBackward",
         KeyA: "moveLeft",
         KeyD: "moveRight",
@@ -43,7 +43,7 @@ const useKeyboard = () => {
         if (action) {
             setActions((prev) => ({ ...prev, [action]: false }))
         }
-    })
+    }, [])
 
     useEffect(() => {
         document.addEventListener("keydown", handleKeyDown)
