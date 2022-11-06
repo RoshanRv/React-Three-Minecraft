@@ -4,8 +4,8 @@ import React, { useEffect, useRef } from "react"
 import { Vector3 } from "three"
 import useKeyboard from "../hooks/useKeyboard"
 
-const JUMP_FORCE = 5
-const SPEED = 5
+const JUMP_FORCE = 4
+const SPEED = 4
 
 const Player = () => {
     const { camera } = useThree()

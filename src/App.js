@@ -4,7 +4,9 @@ import { Canvas } from "@react-three/fiber"
 import Cubes from "./components/Cubes"
 import FPV from "./components/FPV"
 import Ground from "./components/Ground"
+import Menu from "./components/Menu"
 import Player from "./components/Player"
+import TextureSelector from "./components/TextureSelector"
 
 function App() {
     return (
@@ -19,6 +21,8 @@ function App() {
                     <Ground />
                 </Physics>
             </Canvas>
+            <Menu />
+            <TextureSelector />
             <h1 className="center">+</h1>
         </>
     )

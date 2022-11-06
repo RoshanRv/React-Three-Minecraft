@@ -52,3 +52,27 @@ body,
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.texture-img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.active {
+    transform: scale(1.2);
+    border: 8px solid red;
+}
+
+.menu {
+    top: 2rem;
+    left: 2rem;
+    gap: 5rem;
+}
+
+.btn {
+    border: 0px;
+    outline: none;
+    padding: 0.5rem 1rem;
+    background-color: goldenrod;
+    border-radius: 2rem;
+}
